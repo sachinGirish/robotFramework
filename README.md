@@ -1,9 +1,8 @@
 # robotFramework
 
-[![ScreenShot](https://blog.codecentric.de/files/2012/04/Sample_Overview1.png)
+[![ScreenShot](https://blog.codecentric.de/files/2012/04/Sample_Overview1.png)]
 
-
-Welcome to the Robot-Framework 
+<h2>Welcome to the Robot-Framework</h2>
 
 **Requirement and Prerequisite jars**
 
