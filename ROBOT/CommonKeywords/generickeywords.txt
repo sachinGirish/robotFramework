@@ -1,0 +1,36 @@
+*** Settings ***
+Resource          ../ExternalLibraries/Libraries.txt
+
+*** Keywords ***
+verify Error Msg
+    [Arguments]    ${ErrorMsgXpath}    ${expectedErrorMsg}
+    sleep    4
+    Wait Until Element Is Visible    ${ErrorMsgXpath}    ${timeout}
+    Element Text Should Be    ${ErrorMsgXpath}    ${expectedErrorMsg}
+
+CompareValue
+    [Arguments]    ${locator}    ${sheetName}    ${appName}    ${numbervalues}
+    sleep    1
+    ${getValue}=    Get Value    ${locator}
+    ${compareActual}=    Convert To String    ${getValue}
+    ${values}=    Get Excel Row Values    ${sheetName}    ${appName}
+    ${getValue2}=    Get From List    ${values}    ${numbervalues}
+    ${compareExpected}=    Convert To String    ${getValue2}
+    Should Be Equal    ${compareActual}    ${compareExpected}    values are not equal
+
+CompareListValue
+    [Arguments]    ${locator}    ${sheetName}    ${appName}    ${numbervalues}
+    sleep    1
+    ${getValue}=    Get Selected List Label    ${locator}
+    ${compareActual}=    Convert To String    ${getValue}
+    ${values}=    Get Excel Row Values    ${sheetName}    ${appName}
+    ${getValue2}=    Get From List    ${values}    ${numbervalues}
+    ${compareExpected}=    Convert To String    ${getValue2}
+    Should Be Equal    ${compareActual}    ${compareExpected}    values are not equal
+
+CompareTextByXpath
+    [Arguments]    ${CompXpath1}    ${CompXpath2}
+    sleep    2
+    Wait Until Element Is Visible    ${CompXpath1}    ${timeout}
+    Comment    ${CompValue}=    Get Text    ${CompXpath2}
+    Element Text Should Be    ${CompXpath1}    ${CompXpath2}

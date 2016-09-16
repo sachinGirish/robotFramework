@@ -1,0 +1,24 @@
+*** Settings ***
+Resource          ../ExternalLibraries/Libraries.txt
+
+*** Test Cases ***
+TC01_LoginTest
+    launchBrowser
+    login To Application
+    logout
+    Close Browser
+
+TC02_AddingItemsIntoCart
+    launchBrowser
+    navigateToAllBooks
+    selectBusiness&Economics_Books
+    selectFirstBook
+    navigateTo2ndWindow
+    Begin Checkout
+    Close Browser
+
+TC03_ReadDataFromExcelSheet
+    sleepfor2sec
+    ${data}=    loginData    sachin    ADMIN
+    ${userfeild}=    Get From List    ${data}    1
+    ${pwdfeild}=    Get From List    ${data}    2

@@ -1,0 +1,56 @@
+*** Settings ***
+Resource          ../../ExternalLibraries/Libraries.txt
+
+*** Variables ***
+${Dashboard_link}    xpath=//*[contains(text(),'Dashboard')]
+${Welecome_header}    xpath=//*[contains(text(), 'Welcome!')]
+${url}            https://www.amazon.com
+${popup}          xpath=//*[@id='redir-go-to-site']
+${loginLink}      xpath=//*[@id='nav-link-yourAccount']
+${ShopByCategory}    xpath=//span[text()='Category']
+${MouseOverToBooks}    xpath=(//span[text()='Books'])[1]
+${AllBooks}       xpath=//span[text()='All Books']
+${ReadBusiness&Economics_Books}    xpath=//p[text()='Business & Economics']
+${FirstBook}      xpath=(//*[@id='result_0'])//h2
+${addToCart}      xpath=//input[@id='add-to-cart-button']
+${clickOnCart}    id=nav-cart
+${Title}          xpath=.//*[@id='nav-logo']/a/span[1]
+${userTitle}      xpath=//*[@id='nav-your-amazon']
+${proccedCheckOut}    id=hlb-ptc-btn-native
+
+*** Keywords ***
+navigateToAllBooks
+    Click Element    ${ShopByCategory}
+    Wait Until Element Is Visible    ${MouseOverToBooks}    ${timeout}
+    Click Element    ${MouseOverToBooks}
+    Click Element    ${AllBooks}
+
+selectBusiness&Economics_Books
+    Click Element    ${ReadBusiness&Economics_Books}
+
+selectFirstBook
+    Click Element    ${FirstBook}
+
+navigateTo2ndWindow
+    ${mainWindow}=    Get Window Titles
+    ${mainWindow}=    Get From List    ${mainWindow}    0
+    @{windows}=    Get Window Titles
+    : FOR    ${item}    IN    @{windows}
+    \    Continue For Loop If    '${item}'=='${mainWindow}'
+    \    Select Window    Title=${item}
+    \    clickOnAddToCart
+
+clickOnAddToCart
+    Click Element    ${addToCart}
+
+Add Product to Cart
+    click button    id=add-to-cart-button
+    wait until page contains    Added to Cart
+
+Begin Checkout
+    click element    id=hlb-ptc-btn-native
+    page should contain element    css=.a-spacing-small
+    wait until page contains    Sign In
+
+End Web Test
+    close browser

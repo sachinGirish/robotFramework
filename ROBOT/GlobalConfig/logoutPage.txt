@@ -1,0 +1,15 @@
+*** Settings ***
+Resource          ../ExternalLibraries/Libraries.txt
+
+*** Variables ***
+${logout_drpdwn}    xpath=(//*[text()='Your Orders'])[2]
+${logout_BT}      xpath=(//*[contains(text(), 'Sign Out')])[1]
+
+*** Keywords ***
+logout
+    sleep    2
+    Wait Until Element Is Visible    ${logout_drpdwn}    ${timeout}    element not found at logout button
+    Mouse Over    ${logout_drpdwn}
+    Wait Until Element Is Visible    ${logout_BT}    ${timeout}
+    Click Element    ${logout_BT}
+    sleep    2

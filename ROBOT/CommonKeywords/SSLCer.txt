@@ -1,0 +1,9 @@
+*** Settings ***
+Resource          ../ExternalLibraries/Libraries.txt
+
+*** Keywords ***
+certification
+    [Arguments]    ${appURL}
+    ${cer}=    Ssl.Urlname    ${appURL}
+    log    ${cer}
+    [Return]    ${cer}

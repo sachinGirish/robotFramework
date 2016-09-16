@@ -1,0 +1,33 @@
+*** Settings ***
+Resource          ../ExternalLibraries/Libraries.txt
+
+*** Variables ***
+${email}          id=ap_email
+${Password}       id=ap_password
+${submit}         id=signInSubmit
+
+*** Keywords ***
+launch Browser
+    log    ****Opening Browser*****
+    Open Browser    ${appURL}    ${browserName}
+    Delete All Cookies
+    Maximize Browser Window
+    Set Browser Implicit Wait    ${timeout}
+    Set Selenium Timeout    ${timeout}
+    Set Selenium Implicit Wait    ${timeout}
+    Comment    SSLCer.certification    ${appURL}
+    log    *****Browser Launced Successfully*****
+
+login To Application
+    log    *****Logging to application******
+    sleepfor2sec
+    Click Element    ${loginLink}
+    ${data}=    loginData    sachin    ADMIN
+    ${userfeild}=    Get From List    ${data}    1
+    ${pwdfeild}=    Get From List    ${data}    2
+    ${userTitleText}=    Get From List    ${data}    3
+    Input Text    ${email}    ${userfeild}
+    Input Text    ${Password}    ${pwdfeild}
+    Click Element    ${submit}
+    CompareTextByXpath    ${userTitle}    ${userTitleText}
+    log    *****Loggin sucess******

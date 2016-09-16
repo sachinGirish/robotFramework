@@ -1,0 +1,2 @@
+*** Settings ***
+Resource          ../ExternalLibraries/Libraries.txt

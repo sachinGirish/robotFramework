@@ -1,0 +1,11 @@
+*** Settings ***
+Resource          ../ExternalLibraries/Libraries.txt
+
+*** Keywords ***
+currentDate
+    ${date1}=    Datetdy.Datevalue
+    [Return]    ${date1}
+
+dateformat2
+    ${date2}=    Datetdy.Dateformat2
+    [Return]    ${date2}

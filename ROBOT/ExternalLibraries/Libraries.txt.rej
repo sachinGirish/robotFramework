@@ -1,0 +1,9 @@
+diff a/MEL_RobotFramework/ExternalLibraries/Libraries.txt b/MEL_RobotFramework/ExternalLibraries/Libraries.txt	(rejected hunks)
+@@ -24,7 +24,6 @@
+ Resource          ../CommonKeywords/excelData.txt
+ Resource          ../CommonKeywords/DateFormat.txt
+ Resource          ../CommonKeywords/ApplicationKeywords.txt
+-Resource          ../CommonKeywords/generickeywords.txt
+ Resource          ../PageObjects/Adminobjects/homePage.txt
+ Resource          ../PageObjects/Adminobjects/organizationPage.txt
+ Resource          ../PageObjects/Adminobjects/manageOfficesPage.txt

@@ -1,0 +1,10 @@
+*** Settings ***
+Resource          ../ExternalLibraries/Libraries.txt
+
+*** Keywords ***
+selectDrpDwn
+    [Arguments]    ${path}    ${Value}
+    Wait Until Element Is Visible    ${path}    ${timeout}
+    Mouse Up    ${path}
+    Select From List By Label    ${path}    ${Value}
+    sleep    1

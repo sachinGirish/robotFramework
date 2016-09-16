@@ -1,0 +1,25 @@
+*** Settings ***
+Library           Selenium2Library
+Library           ExcelLibrary
+Library           DateTime
+Library           String
+Library           Collections
+Library           ../InternalLibraries/Datetdy.py
+Library           OperatingSystem
+Library           ../InternalLibraries/getFileName.py
+Library           ../InternalLibraries/ExcelRead.py
+Library           ../InternalLibraries/Replace.py
+Library           ../InternalLibraries/TestCaseStatus.py
+Library           ../InternalLibraries/gmailsendemail.py
+Library           ../InternalLibraries/ParseXmlOutput.py
+Resource          ../GlobalConfig/GlobalConfig.txt
+Resource          ../GlobalConfig/logoutPage.txt
+Resource          ../GlobalConfig/LoginPage.txt
+Resource          ../CommonKeywords/dropDownList.txt
+Resource          ../CommonKeywords/SSLCer.txt
+Resource          ../CommonKeywords/excelData.txt
+Resource          ../CommonKeywords/DateFormat.txt
+Resource          ../CommonKeywords/excelData.txt
+Resource          ../CommonKeywords/DateFormat.txt
+Resource          ../CommonKeywords/generickeywords.txt
+Resource          ../PageObjects/amzonObjects/amazonPage.txt

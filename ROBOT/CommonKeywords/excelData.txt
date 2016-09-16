@@ -1,0 +1,71 @@
+*** Settings ***
+Resource          ../ExternalLibraries/Libraries.txt
+
+*** Variables ***
+${accountExcel}    ${CURDIR}/../Dataproviders/Copy of EMI Calculator.xls
+${accountSheet}    EMI Calculator
+${excelMelLosFilePath}    ${CURDIR}\\..\\DataProviders\\melUnsecuredTestData.xls
+${accountsheet2}    AccountSummary
+${melUnsecuredTestData_path}    ${CURDIR}\\..\\Dataproviders\\melUnsecuredTestData.xls
+
+*** Keywords ***
+loginData
+    [Arguments]    ${sheetname}    ${username}
+    ${data}=    ExcelRead.Excel    ${CURDIR}/../Dataproviders/Data.xls    ${sheetname}    ${username}
+    Log List    ${data}
+    [Return]    ${data}
+
+TestCaseExecution
+    [Arguments]    ${sheetname}    ${testcaseName}
+    ${data}=    TestCaseStatus.Excel    ${CURDIR}\\..\\Dataproviders\\Data.xls    ${sheetname}    ${testcaseName}
+    [Return]    ${data}
+
+TestCase Status
+    [Arguments]    ${testcaseName}
+    ${data}=    TestCaseExecution    TestCase    ${testcaseName}
+    ${status}=    Set Variable    ${data}
+    Pass Execution If    '${status}' == ${data}    Skipped TestCase
+
+accountSummmary
+    ${disb}=    AccountSummary.Disbursement Date    ${accountExcel}    ${accountSheet}
+    [Return]    ${disb}
+
+Get Excel Row Values
+    [Arguments]    ${sheetName}    ${uniqueValue}
+    ${values}=    ExcelRead.Excel    ${excelMelLosFilePath}    ${sheetName}    ${uniqueValue}
+    [Return]    ${values}
+
+GetExceldata_Loanpayemt
+    [Arguments]    ${excelPath}    ${sheetName}    ${uniqueValue}
+    : FOR    ${i}    IN RANGE    12
+    \    ${values}=    ExcelRead.Excel    ${excelPath}    ${sheetName}    ${i}
+    [Return]    ${values}
+
+ReceiptBookLeafs
+    [Arguments]    ${unique}
+    ${Receipt}=    loginData    ReceiptBook    ${unique}
+    log    ${Receipt}
+    ${leaf}=    Get From List    ${Receipt}    1
+    ${leaf1}=    Get From List    ${Receipt}    2
+    ${leaf2}=    Get From List    ${Receipt}    3
+    [Return]    ${Receipt}
+
+ReceiptBookData
+
+Unquievaluedata
+    [Arguments]    ${sheetname}
+    ${data}=    ExcelRead.Uniquedata    ${CURDIR}/../Dataproviders/Data.xls    ${sheetname}
+    Log List    ${data}
+    [Return]    ${data}
+
+Rowcount
+    [Arguments]    ${sheetname}
+    ${data}=    ExcelRead.Rowscount    ${CURDIR}/../Dataproviders/Data.xls    ${sheetname}
+    Log    ${data}
+    [Return]    ${data}
+
+Datavalue
+    [Arguments]    ${sheetname}    ${i}    ${j}
+    ${data}=    Genericdate    ${CURDIR}/../Dataproviders/Data.xls    ${sheetname}    ${i}    ${j}
+    Log List    ${data}
+    [Return]    ${data}
