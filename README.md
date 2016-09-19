@@ -67,8 +67,9 @@ On Windows running ride.py requires having <PythonInstallationDir>\Scripts on PA
 pip install jarName --ver    (use higher version )        
 
 
-$ pip freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs pip install -U   (To update All jars )
+pip freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs pip install -U   (To update All jars )
 
+pip list (check version of all installed jars)
 
 apipkg==1.4
 Appium-Python-Client==0.20
