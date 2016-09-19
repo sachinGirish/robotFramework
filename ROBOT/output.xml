@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20160912 12:35:51.307" generator="Robot 3.0 (Python 2.7.10 on win32)">
-<suite source="C:\ROBOT" id="s1" name="ROBOT">
-<suite source="C:\ROBOT\TestSuite" id="s1-s1" name="TestSuite">
-<suite source="C:\ROBOT\TestSuite\Test.txt" id="s1-s1-s1" name="Test">
-<test id="s1-s1-s1-t1" name="TC01_LoginTest">
+<robot generated="20160919 14:43:36.427" generator="Robot 3.0 (Python 2.7.10 on win32)">
+<suite source="C:\ROBOT\TestSuite\amazon_Module.txt" id="s1" name="amazon Module">
+<test id="s1-t1" name="TC02_AddingItemsIntoCart">
 <kw name="launch Browser" library="LoginPage">
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>****Opening Browser*****</arg>
 </arguments>
-<msg timestamp="20160912 12:35:52.110" level="INFO">****Opening Browser*****</msg>
-<status status="PASS" endtime="20160912 12:35:52.111" starttime="20160912 12:35:52.110"></status>
+<msg timestamp="20160919 14:43:37.208" level="INFO">****Opening Browser*****</msg>
+<status status="PASS" endtime="20160919 14:43:37.208" starttime="20160919 14:43:37.208"></status>
 </kw>
 <kw name="Open Browser" library="Selenium2Library">
 <doc>Opens a new browser instance to given URL.</doc>
@@ -19,37 +17,37 @@
 <arg>${appURL}</arg>
 <arg>${browserName}</arg>
 </arguments>
-<msg timestamp="20160912 12:35:52.112" level="INFO">Opening browser 'ff' to base url 'https://www.amazon.com'</msg>
-<status status="PASS" endtime="20160912 12:36:00.424" starttime="20160912 12:35:52.112"></status>
+<msg timestamp="20160919 14:43:37.208" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.in'</msg>
+<status status="PASS" endtime="20160919 14:43:53.884" starttime="20160919 14:43:37.208"></status>
 </kw>
 <kw name="Delete All Cookies" library="Selenium2Library">
 <doc>Deletes all cookies.</doc>
-<status status="PASS" endtime="20160912 12:36:01.152" starttime="20160912 12:36:00.425"></status>
+<status status="PASS" endtime="20160919 14:44:03.887" starttime="20160919 14:43:53.884"></status>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20160912 12:36:01.370" starttime="20160912 12:36:01.152"></status>
+<status status="PASS" endtime="20160919 14:44:05.065" starttime="20160919 14:44:03.887"></status>
 </kw>
 <kw name="Set Browser Implicit Wait" library="Selenium2Library">
 <doc>Sets current browser's implicit wait in seconds.</doc>
 <arguments>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" endtime="20160912 12:36:01.393" starttime="20160912 12:36:01.371"></status>
+<status status="PASS" endtime="20160919 14:44:05.072" starttime="20160919 14:44:05.066"></status>
 </kw>
 <kw name="Set Selenium Timeout" library="Selenium2Library">
 <doc>Sets the timeout in seconds used by various keywords.</doc>
 <arguments>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" endtime="20160912 12:36:01.439" starttime="20160912 12:36:01.394"></status>
+<status status="PASS" endtime="20160919 14:44:05.078" starttime="20160919 14:44:05.072"></status>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="Selenium2Library">
 <doc>Sets Selenium 2's default implicit wait in seconds and</doc>
 <arguments>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" endtime="20160912 12:36:01.469" starttime="20160912 12:36:01.440"></status>
+<status status="PASS" endtime="20160919 14:44:05.083" starttime="20160919 14:44:05.079"></status>
 </kw>
 <kw name="Comment" library="BuiltIn">
 <doc>Displays the given messages in the log file as keyword arguments.</doc>
@@ -57,476 +55,82 @@
 <arg>SSLCer.certification</arg>
 <arg>${appURL}</arg>
 </arguments>
-<status status="PASS" endtime="20160912 12:36:01.471" starttime="20160912 12:36:01.471"></status>
+<status status="PASS" endtime="20160919 14:44:05.084" starttime="20160919 14:44:05.084"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>*****Browser Launced Successfully*****</arg>
 </arguments>
-<msg timestamp="20160912 12:36:01.473" level="INFO">*****Browser Launced Successfully*****</msg>
-<status status="PASS" endtime="20160912 12:36:01.473" starttime="20160912 12:36:01.472"></status>
+<msg timestamp="20160919 14:44:05.085" level="INFO">*****Browser Launced Successfully*****</msg>
+<status status="PASS" endtime="20160919 14:44:05.086" starttime="20160919 14:44:05.085"></status>
 </kw>
-<status status="PASS" endtime="20160912 12:36:01.474" starttime="20160912 12:35:52.109"></status>
+<status status="PASS" endtime="20160919 14:44:05.086" starttime="20160919 14:43:37.208"></status>
 </kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>${popup}</arg>
-</arguments>
-<msg timestamp="20160912 12:36:01.478" level="INFO">Clicking element 'xpath=//*[@id='redir-go-to-site']'.</msg>
-<status status="PASS" endtime="20160912 12:36:01.752" starttime="20160912 12:36:01.475"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>${loginLink}</arg>
-</arguments>
-<msg timestamp="20160912 12:36:01.754" level="INFO">Clicking element 'xpath=//*[@id='nav-link-yourAccount']'.</msg>
-<status status="PASS" endtime="20160912 12:36:05.061" starttime="20160912 12:36:01.753"></status>
-</kw>
-<kw name="sleepfor2sec" library="GlobalConfig">
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>2</arg>
-</arguments>
-<msg timestamp="20160912 12:36:07.064" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" endtime="20160912 12:36:07.064" starttime="20160912 12:36:05.063"></status>
-</kw>
-<status status="PASS" endtime="20160912 12:36:07.065" starttime="20160912 12:36:05.062"></status>
-</kw>
-<kw name="loginData" library="excelData">
-<arguments>
-<arg>sachin</arg>
-<arg>ADMIN</arg>
-</arguments>
-<assign>
-<var>${data}</var>
-</assign>
-<kw name="Excel" library="ExcelRead">
-<arguments>
-<arg>C:\\ROBOT\\CommonKeywords/../Dataproviders/Data.xls</arg>
-<arg>${sheetname}</arg>
-<arg>${username}</arg>
-</arguments>
-<assign>
-<var>${data}</var>
-</assign>
-<msg timestamp="20160912 12:36:07.073" level="INFO">${data} = ['ADMIN', 'maheshbadiger86@gmail.com', 'Qwerty@123', "Mahesh's Amazon.in"]</msg>
-<status status="PASS" endtime="20160912 12:36:07.073" starttime="20160912 12:36:07.067"></status>
-</kw>
-<kw name="Log List" library="Collections">
-<doc>Logs the length and contents of the ``list`` using given ``level``.</doc>
-<arguments>
-<arg>${data}</arg>
-</arguments>
-<msg timestamp="20160912 12:36:07.074" level="INFO">List length is 4 and it contains following items:
-0: ADMIN
-1: maheshbadiger86@gmail.com
-2: Qwerty@123
-3: Mahesh's Amazon.in</msg>
-<status status="PASS" endtime="20160912 12:36:07.075" starttime="20160912 12:36:07.074"></status>
-</kw>
-<msg timestamp="20160912 12:36:07.076" level="INFO">${data} = ['ADMIN', 'maheshbadiger86@gmail.com', 'Qwerty@123', "Mahesh's Amazon.in"]</msg>
-<status status="PASS" endtime="20160912 12:36:07.076" starttime="20160912 12:36:07.065"></status>
-</kw>
-<kw name="Get From List" library="Collections">
-<doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<arguments>
-<arg>${data}</arg>
-<arg>1</arg>
-</arguments>
-<assign>
-<var>${userfeild}</var>
-</assign>
-<msg timestamp="20160912 12:36:07.078" level="INFO">${userfeild} = maheshbadiger86@gmail.com</msg>
-<status status="PASS" endtime="20160912 12:36:07.078" starttime="20160912 12:36:07.077"></status>
-</kw>
-<kw name="Get From List" library="Collections">
-<doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<arguments>
-<arg>${data}</arg>
-<arg>2</arg>
-</arguments>
-<assign>
-<var>${pwdfeild}</var>
-</assign>
-<msg timestamp="20160912 12:36:07.081" level="INFO">${pwdfeild} = Qwerty@123</msg>
-<status status="PASS" endtime="20160912 12:36:07.081" starttime="20160912 12:36:07.080"></status>
-</kw>
-<kw name="Get From List" library="Collections">
-<doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<arguments>
-<arg>${data}</arg>
-<arg>3</arg>
-</arguments>
-<assign>
-<var>${userTitleText}</var>
-</assign>
-<msg timestamp="20160912 12:36:07.084" level="INFO">${userTitleText} = Mahesh's Amazon.in</msg>
-<status status="PASS" endtime="20160912 12:36:07.084" starttime="20160912 12:36:07.083"></status>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<arguments>
-<arg>${email}</arg>
-<arg>${userfeild}</arg>
-</arguments>
-<msg timestamp="20160912 12:36:07.087" level="INFO">Typing text 'maheshbadiger86@gmail.com' into text field 'ap_email'</msg>
-<status status="PASS" endtime="20160912 12:36:07.310" starttime="20160912 12:36:07.086"></status>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<arguments>
-<arg>${Password}</arg>
-<arg>${pwdfeild}</arg>
-</arguments>
-<msg timestamp="20160912 12:36:07.311" level="INFO">Typing text 'Qwerty@123' into text field 'ap_password'</msg>
-<status status="PASS" endtime="20160912 12:36:08.227" starttime="20160912 12:36:07.310"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>${submit}</arg>
-</arguments>
-<msg timestamp="20160912 12:36:08.228" level="INFO">Clicking element 'signInSubmit'.</msg>
-<status status="PASS" endtime="20160912 12:36:11.734" starttime="20160912 12:36:08.227"></status>
-</kw>
-<kw name="CompareTextByXpath" library="generickeywords">
-<arguments>
-<arg>${userTitle}</arg>
-<arg>${userTitleText}</arg>
-</arguments>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>2</arg>
-</arguments>
-<msg timestamp="20160912 12:36:13.738" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" endtime="20160912 12:36:13.738" starttime="20160912 12:36:11.736"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="Selenium2Library">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>${CompXpath1}</arg>
-<arg>${timeout}</arg>
-</arguments>
-<status status="PASS" endtime="20160912 12:36:13.816" starttime="20160912 12:36:13.739"></status>
-</kw>
-<kw name="Comment" library="BuiltIn">
-<doc>Displays the given messages in the log file as keyword arguments.</doc>
-<arguments>
-<arg>${CompValue}=</arg>
-<arg>Get Text</arg>
-<arg>${CompXpath2}</arg>
-</arguments>
-<status status="PASS" endtime="20160912 12:36:13.818" starttime="20160912 12:36:13.817"></status>
-</kw>
-<kw name="Element Text Should Be" library="Selenium2Library">
-<doc>Verifies element identified by `locator` exactly contains text `expected`.</doc>
-<arguments>
-<arg>${CompXpath1}</arg>
-<arg>${CompXpath2}</arg>
-</arguments>
-<msg timestamp="20160912 12:36:13.820" level="INFO">Verifying element 'xpath=//*[@id='nav-your-amazon']' contains exactly text 'Mahesh's Amazon.in'.</msg>
-<status status="PASS" endtime="20160912 12:36:13.878" starttime="20160912 12:36:13.819"></status>
-</kw>
-<status status="PASS" endtime="20160912 12:36:13.879" starttime="20160912 12:36:11.735"></status>
-</kw>
-<status status="PASS" endtime="20160912 12:36:13.879" critical="yes" starttime="20160912 12:35:52.107"></status>
-</test>
-<test id="s1-s1-s1-t2" name="TC02_AddingItemsIntoCart">
-<kw name="launch Browser" library="LoginPage">
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>****Opening Browser*****</arg>
-</arguments>
-<msg timestamp="20160912 12:36:13.884" level="INFO">****Opening Browser*****</msg>
-<status status="PASS" endtime="20160912 12:36:13.885" starttime="20160912 12:36:13.884"></status>
-</kw>
-<kw name="Open Browser" library="Selenium2Library">
-<doc>Opens a new browser instance to given URL.</doc>
-<arguments>
-<arg>${appURL}</arg>
-<arg>${browserName}</arg>
-</arguments>
-<msg timestamp="20160912 12:36:13.887" level="INFO">Opening browser 'ff' to base url 'https://www.amazon.com'</msg>
-<status status="PASS" endtime="20160912 12:36:24.083" starttime="20160912 12:36:13.885"></status>
-</kw>
-<kw name="Delete All Cookies" library="Selenium2Library">
-<doc>Deletes all cookies.</doc>
-<status status="PASS" endtime="20160912 12:36:24.811" starttime="20160912 12:36:24.084"></status>
-</kw>
-<kw name="Maximize Browser Window" library="Selenium2Library">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20160912 12:36:25.047" starttime="20160912 12:36:24.812"></status>
-</kw>
-<kw name="Set Browser Implicit Wait" library="Selenium2Library">
-<doc>Sets current browser's implicit wait in seconds.</doc>
-<arguments>
-<arg>${timeout}</arg>
-</arguments>
-<status status="PASS" endtime="20160912 12:36:25.088" starttime="20160912 12:36:25.048"></status>
-</kw>
-<kw name="Set Selenium Timeout" library="Selenium2Library">
-<doc>Sets the timeout in seconds used by various keywords.</doc>
-<arguments>
-<arg>${timeout}</arg>
-</arguments>
-<status status="PASS" endtime="20160912 12:36:25.170" starttime="20160912 12:36:25.089"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets Selenium 2's default implicit wait in seconds and</doc>
-<arguments>
-<arg>${timeout}</arg>
-</arguments>
-<status status="PASS" endtime="20160912 12:36:25.201" starttime="20160912 12:36:25.171"></status>
-</kw>
-<kw name="Comment" library="BuiltIn">
-<doc>Displays the given messages in the log file as keyword arguments.</doc>
-<arguments>
-<arg>SSLCer.certification</arg>
-<arg>${appURL}</arg>
-</arguments>
-<status status="PASS" endtime="20160912 12:36:25.203" starttime="20160912 12:36:25.202"></status>
-</kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>*****Browser Launced Successfully*****</arg>
-</arguments>
-<msg timestamp="20160912 12:36:25.204" level="INFO">*****Browser Launced Successfully*****</msg>
-<status status="PASS" endtime="20160912 12:36:25.204" starttime="20160912 12:36:25.203"></status>
-</kw>
-<status status="PASS" endtime="20160912 12:36:25.204" starttime="20160912 12:36:13.882"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>${popup}</arg>
-</arguments>
-<msg timestamp="20160912 12:36:25.206" level="INFO">Clicking element 'xpath=//*[@id='redir-go-to-site']'.</msg>
-<status status="PASS" endtime="20160912 12:36:25.405" starttime="20160912 12:36:25.205"></status>
-</kw>
+<kw name="navigateToAllBooks" library="amazonPage">
 <kw name="Mouse Over" library="Selenium2Library">
 <doc>Simulates hovering mouse over the element specified by `locator`.</doc>
 <arguments>
 <arg>${ShopByCategory}</arg>
 </arguments>
-<msg timestamp="20160912 12:36:25.409" level="INFO">Simulating Mouse Over on element '//span[text()='Shop by']'</msg>
-<status status="PASS" endtime="20160912 12:36:28.250" starttime="20160912 12:36:25.407"></status>
+<msg timestamp="20160919 14:44:05.089" level="INFO">Simulating Mouse Over on element 'xpath=//span[text()='Category']'</msg>
+<status status="PASS" endtime="20160919 14:44:05.158" starttime="20160919 14:44:05.088"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
 <arg>${MouseOverToBooks}</arg>
-<arg>30</arg>
+<arg>${timeout}</arg>
 </arguments>
-<status status="PASS" endtime="20160912 12:36:28.325" starttime="20160912 12:36:28.251"></status>
+<status status="PASS" endtime="20160919 14:44:05.241" starttime="20160919 14:44:05.159"></status>
 </kw>
-<kw name="Mouse Over" library="Selenium2Library">
-<doc>Simulates hovering mouse over the element specified by `locator`.</doc>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>${MouseOverToBooks}</arg>
 </arguments>
-<msg timestamp="20160912 12:36:28.327" level="INFO">Simulating Mouse Over on element 'xpath=(//span[text()='Books'])[1]'</msg>
-<status status="PASS" endtime="20160912 12:36:28.423" starttime="20160912 12:36:28.326"></status>
+<msg timestamp="20160919 14:44:05.242" level="INFO">Clicking element 'xpath=(//span[text()='Books'])[1]'.</msg>
+<status status="PASS" endtime="20160919 14:44:05.318" starttime="20160919 14:44:05.241"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>${AllBooks}</arg>
 </arguments>
-<msg timestamp="20160912 12:36:28.425" level="INFO">Clicking element 'xpath=//span[text()='All Books']'.</msg>
-<status status="PASS" endtime="20160912 12:36:28.660" starttime="20160912 12:36:28.424"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>${ReadBusiness&amp;Economics_Books}</arg>
-</arguments>
-<msg timestamp="20160912 12:36:28.662" level="INFO">Clicking element 'xpath=//p[text()='Business &amp; Economics']'.</msg>
-<status status="PASS" endtime="20160912 12:36:33.134" starttime="20160912 12:36:28.661"></status>
-</kw>
-<kw name="Get Window Titles" library="Selenium2Library">
-<doc>Returns and logs titles of all windows known to the browser.</doc>
-<assign>
-<var>${mainWindow}</var>
-</assign>
-<msg timestamp="20160912 12:36:35.646" level="INFO">Altogether 1 item.
-1: Business &amp; Economics Books : Buy Books on Economics &amp; Business Online in India @ Amazon.in</msg>
-<msg timestamp="20160912 12:36:35.646" level="INFO">${mainWindow} = [u'Business &amp; Economics Books : Buy Books on Economics &amp; Business Online in India @ Amazon.in']</msg>
-<status status="PASS" endtime="20160912 12:36:35.646" starttime="20160912 12:36:33.135"></status>
-</kw>
-<kw name="Get From List" library="Collections">
-<doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<arguments>
-<arg>${mainWindow}</arg>
-<arg>0</arg>
-</arguments>
-<assign>
-<var>${mainWindow}</var>
-</assign>
-<msg timestamp="20160912 12:36:35.648" level="INFO">${mainWindow} = Business &amp; Economics Books : Buy Books on Economics &amp; Business Online in India @ Amazon.in</msg>
-<status status="PASS" endtime="20160912 12:36:35.649" starttime="20160912 12:36:35.647"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>${FirestBook}</arg>
-</arguments>
-<msg timestamp="20160912 12:36:35.650" level="INFO">Clicking element 'xpath=(//*[@id='result_0'])//h2'.</msg>
-<status status="PASS" endtime="20160912 12:36:35.891" starttime="20160912 12:36:35.649"></status>
-</kw>
-<kw name="Get Window Titles" library="Selenium2Library">
-<doc>Returns and logs titles of all windows known to the browser.</doc>
-<assign>
-<var>@{windows}</var>
-</assign>
-<msg timestamp="20160912 12:36:42.514" level="INFO">Altogether 2 items.
-1: Business &amp; Economics Books : Buy Books on Economics &amp; Business Online in India @ Amazon.in
-2: Buy Quantitative Aptitude for Competitive Examinations Book Online at Low Prices in India | Quantitative Aptitude for Competitive Examinations Reviews &amp; Ratings - Amazon.in</msg>
-<msg timestamp="20160912 12:36:42.516" level="INFO">@{windows} = [ Business &amp; Economics Books : Buy Books on Economics &amp; Business Online in India @ Amazon.in | Buy Quantitative Aptitude for Competitive Examinations Book Online at Low Prices in India | Quantitative ...</msg>
-<status status="PASS" endtime="20160912 12:36:42.516" starttime="20160912 12:36:35.892"></status>
-</kw>
-<kw type="for" name="${item} IN [ @{windows} ]">
-<kw type="foritem" name="${item} = Business &amp; Economics Books : Buy Books on Economics &amp; Business Online in India @ Amazon.in">
-<kw name="Continue For Loop If" library="BuiltIn">
-<doc>Skips the current for loop iteration if the ``condition`` is true.</doc>
-<arguments>
-<arg>'${item}'=='${mainWindow}'</arg>
-</arguments>
-<msg timestamp="20160912 12:36:42.520" level="INFO">Continuing for loop from the next iteration.</msg>
-<status status="PASS" endtime="20160912 12:36:42.520" starttime="20160912 12:36:42.518"></status>
-</kw>
-<status status="PASS" endtime="20160912 12:36:42.521" starttime="20160912 12:36:42.517"></status>
-</kw>
-<kw type="foritem" name="${item} = Buy Quantitative Aptitude for Competitive Examinations Book Online at Low Prices in India | Quantitative Aptitude for Competitive Examinations Reviews &amp; Ratings - Amazon.in">
-<kw name="Continue For Loop If" library="BuiltIn">
-<doc>Skips the current for loop iteration if the ``condition`` is true.</doc>
-<arguments>
-<arg>'${item}'=='${mainWindow}'</arg>
-</arguments>
-<status status="PASS" endtime="20160912 12:36:42.525" starttime="20160912 12:36:42.522"></status>
-</kw>
-<kw name="Select Window" library="Selenium2Library">
-<doc>Selects the window matching locator and return previous window handle.</doc>
-<arguments>
-<arg>Title=${item}</arg>
-</arguments>
-<status status="PASS" endtime="20160912 12:36:42.696" starttime="20160912 12:36:42.526"></status>
-</kw>
-<status status="PASS" endtime="20160912 12:36:42.696" starttime="20160912 12:36:42.521"></status>
-</kw>
-<status status="PASS" endtime="20160912 12:36:42.696" starttime="20160912 12:36:42.517"></status>
-</kw>
-<kw name="Select Window" library="Selenium2Library">
-<doc>Selects the window matching locator and return previous window handle.</doc>
-<arguments>
-<arg>Title=Amezon</arg>
-</arguments>
+<msg timestamp="20160919 14:44:05.319" level="INFO">Clicking element 'xpath=//span[text()='All Books']'.</msg>
 <kw name="Capture Page Screenshot" library="Selenium2Library">
 <doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20160912 12:36:47.933" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20160912 12:36:47.934" starttime="20160912 12:36:46.149"></status>
+<msg timestamp="20160919 14:44:05.794" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20160919 14:44:05.795" starttime="20160919 14:44:05.379"></status>
 </kw>
-<msg timestamp="20160912 12:36:47.939" level="FAIL">ValueError: Unable to locate window with title 'Amezon'</msg>
-<status status="FAIL" endtime="20160912 12:36:47.940" starttime="20160912 12:36:42.697"></status>
+<msg timestamp="20160919 14:44:05.798" level="FAIL">ElementNotVisibleException: Message: element not visible
+  (Session info: chrome=53.0.2785.116)
+  (Driver info: chromedriver=2.23.409699 (49b0fa931cda1caad0ae15b7d1b68004acd05129),platform=Windows NT 6.3.9600 x86_64)
+</msg>
+<status status="FAIL" endtime="20160919 14:44:05.798" starttime="20160919 14:44:05.319"></status>
 </kw>
-<status status="FAIL" endtime="20160912 12:36:47.942" critical="yes" starttime="20160912 12:36:13.881">ValueError: Unable to locate window with title 'Amezon'</status>
+<status status="FAIL" endtime="20160919 14:44:05.798" starttime="20160919 14:44:05.088"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20160919 14:44:08.864" starttime="20160919 14:44:05.799"></status>
+</kw>
+<status status="FAIL" endtime="20160919 14:44:08.864" critical="yes" starttime="20160919 14:43:37.192">ElementNotVisibleException: Message: element not visible
+  (Session info: chrome=53.0.2785.116)
+  (Driver info: chromedriver=2.23.409699 (49b0fa931cda1caad0ae15b7d1b68004acd05129),platform=Windows NT 6.3.9600 x86_64)
+</status>
 </test>
-<test id="s1-s1-s1-t3" name="ReadDataIntoExcelSheet">
-<kw name="sleepfor2sec" library="GlobalConfig">
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>2</arg>
-</arguments>
-<msg timestamp="20160912 12:36:49.946" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" endtime="20160912 12:36:49.946" starttime="20160912 12:36:47.946"></status>
-</kw>
-<status status="PASS" endtime="20160912 12:36:49.947" starttime="20160912 12:36:47.945"></status>
-</kw>
-<kw name="loginData" library="excelData">
-<arguments>
-<arg>sachin</arg>
-<arg>ADMIN</arg>
-</arguments>
-<assign>
-<var>${data}</var>
-</assign>
-<kw name="Excel" library="ExcelRead">
-<arguments>
-<arg>C:\\ROBOT\\CommonKeywords/../Dataproviders/Data.xls</arg>
-<arg>${sheetname}</arg>
-<arg>${username}</arg>
-</arguments>
-<assign>
-<var>${data}</var>
-</assign>
-<msg timestamp="20160912 12:36:49.957" level="INFO">${data} = ['ADMIN', 'maheshbadiger86@gmail.com', 'Qwerty@123', "Mahesh's Amazon.in"]</msg>
-<status status="PASS" endtime="20160912 12:36:49.958" starttime="20160912 12:36:49.949"></status>
-</kw>
-<kw name="Log List" library="Collections">
-<doc>Logs the length and contents of the ``list`` using given ``level``.</doc>
-<arguments>
-<arg>${data}</arg>
-</arguments>
-<msg timestamp="20160912 12:36:49.959" level="INFO">List length is 4 and it contains following items:
-0: ADMIN
-1: maheshbadiger86@gmail.com
-2: Qwerty@123
-3: Mahesh's Amazon.in</msg>
-<status status="PASS" endtime="20160912 12:36:49.960" starttime="20160912 12:36:49.959"></status>
-</kw>
-<msg timestamp="20160912 12:36:49.960" level="INFO">${data} = ['ADMIN', 'maheshbadiger86@gmail.com', 'Qwerty@123', "Mahesh's Amazon.in"]</msg>
-<status status="PASS" endtime="20160912 12:36:49.961" starttime="20160912 12:36:49.948"></status>
-</kw>
-<kw name="Get From List" library="Collections">
-<doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<arguments>
-<arg>${data}</arg>
-<arg>1</arg>
-</arguments>
-<assign>
-<var>${userfeild}</var>
-</assign>
-<msg timestamp="20160912 12:36:49.962" level="INFO">${userfeild} = maheshbadiger86@gmail.com</msg>
-<status status="PASS" endtime="20160912 12:36:49.963" starttime="20160912 12:36:49.961"></status>
-</kw>
-<kw name="Get From List" library="Collections">
-<doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<arguments>
-<arg>${data}</arg>
-<arg>2</arg>
-</arguments>
-<assign>
-<var>${pwdfeild}</var>
-</assign>
-<msg timestamp="20160912 12:36:49.964" level="INFO">${pwdfeild} = Qwerty@123</msg>
-<status status="PASS" endtime="20160912 12:36:49.965" starttime="20160912 12:36:49.964"></status>
-</kw>
-<status status="PASS" endtime="20160912 12:36:49.965" critical="yes" starttime="20160912 12:36:47.943"></status>
-</test>
-<status status="FAIL" endtime="20160912 12:36:49.966" starttime="20160912 12:35:52.062"></status>
-</suite>
-<status status="FAIL" endtime="20160912 12:36:49.974" starttime="20160912 12:35:51.376"></status>
-</suite>
-<status status="FAIL" endtime="20160912 12:36:49.979" starttime="20160912 12:35:51.336"></status>
+<status status="FAIL" endtime="20160919 14:44:08.864" starttime="20160919 14:43:36.427"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="1" pass="2">Critical Tests</stat>
-<stat fail="1" pass="2">All Tests</stat>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat fail="1" id="s1" name="ROBOT" pass="2">ROBOT</stat>
-<stat fail="1" id="s1-s1" name="TestSuite" pass="2">ROBOT.TestSuite</stat>
-<stat fail="1" id="s1-s1-s1" name="Test" pass="2">ROBOT.TestSuite.Test</stat>
+<stat fail="1" id="s1" name="amazon Module" pass="0">amazon Module</stat>
 </suite>
 </statistics>
 <errors>

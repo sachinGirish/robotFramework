@@ -20,7 +20,7 @@ ${proccedCheckOut}    id=hlb-ptc-btn-native
 
 *** Keywords ***
 navigateToAllBooks
-    Click Element    ${ShopByCategory}
+    Mouse Over    ${ShopByCategory}
     Wait Until Element Is Visible    ${MouseOverToBooks}    ${timeout}
     Click Element    ${MouseOverToBooks}
     Click Element    ${AllBooks}
@@ -39,6 +39,9 @@ navigateTo2ndWindow
     \    Continue For Loop If    '${item}'=='${mainWindow}'
     \    Select Window    Title=${item}
     \    clickOnAddToCart
+
+clickOnUserTitle
+    Click Element    ${userTitle}
 
 clickOnAddToCart
     Click Element    ${addToCart}

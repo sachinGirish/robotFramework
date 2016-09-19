@@ -1,0 +1,25 @@
+*** Settings ***
+Resource          ../../ExternalLibraries/Libraries.txt
+
+*** Variables ***
+${Your_Profile_link}    xpath=//span[contains(text(),'Your Profile')]
+${Your_Browsing_History_link}    xpath=//span[contains(text(),'Your Browsing History')]
+${Edit_Profile_BT}    xpath=//span[contains(text(),'Edit Profile')]
+${profile_Interests_BT}    id=profile_interests
+${Save1_BT}       xpath=(//span[@id='save-public-activity-announce'])[1]
+${Save_sucess_Text_BT}    xpath=//*[contains(text(),'Your public name & info has been saved')]
+
+*** Keywords ***
+clickOnProfile
+    Click Element    ${Your_Profile_link}
+
+clickOnEditProfile
+    Click Element    ${Edit_Profile_BT}
+
+fillUpProfile
+    Clear Element Text    ${profile_Interests_BT}
+    Input Text    ${profile_Interests_BT}    Books and News
+
+clickOnSaveProfile
+    Click Element    ${Save1_BT}
+    Wait Until Element Is Visible    ${Save_sucess_Text_BT}

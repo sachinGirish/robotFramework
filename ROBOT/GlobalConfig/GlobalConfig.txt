@@ -2,7 +2,7 @@
 Resource          ../ExternalLibraries/Libraries.txt
 
 *** Variables ***
-${browserName}    ff    # for firefoxBrowser ff || for chromeBrowser chrome || for InternetExplorer ie
+${browserName}    ff     # for firefoxBrowser ff || for chromeBrowser chrome || for InternetExplorer ie
 ${appURL}         https://www.amazon.in
 ${userSheetName}    sachin
 ${timeout}        20

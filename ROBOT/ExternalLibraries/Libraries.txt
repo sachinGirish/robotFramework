@@ -23,3 +23,4 @@ Resource          ../CommonKeywords/excelData.txt
 Resource          ../CommonKeywords/DateFormat.txt
 Resource          ../CommonKeywords/generickeywords.txt
 Resource          ../PageObjects/amzonObjects/amazonPage.txt
+Resource          ../PageObjects/amzonObjects/yoursAmazonPage.txt.txt

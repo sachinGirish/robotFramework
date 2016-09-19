@@ -7,6 +7,7 @@ TC01_LoginTest
     login To Application
     logout
     Close Browser
+    [Teardown]    Close Browser
 
 TC02_AddingItemsIntoCart
     launchBrowser
@@ -15,10 +16,28 @@ TC02_AddingItemsIntoCart
     selectFirstBook
     navigateTo2ndWindow
     Begin Checkout
-    Close Browser
+    [Teardown]    Close Browser
 
 TC03_ReadDataFromExcelSheet
     sleepfor2sec
     ${data}=    loginData    sachin    ADMIN
     ${userfeild}=    Get From List    ${data}    1
     ${pwdfeild}=    Get From List    ${data}    2
+
+TC04_WriteDataToExcelSheet
+    ExcelRead.Write Value    D:/eclipse/seleniumrsm9/pomframework/d.xlsx    sachin    A2    qwerty
+    Comment    ${data}=    ExcelRead.Excel    ${CURDIR}/../Dataproviders/da.xls    sachin    moolya
+    Comment    ${userfeild}=    Get From List    ${data}    1
+    Comment    ${pwdfeild}=    Get From List    ${data}    2
+    ${data}=    ExcelRead.Read Value    ${CURDIR}/../Dataproviders/data.xlsx    Login    username
+    ${userfeild}=    Get From List    ${data}    1
+    ${pwdfeild}=    Get From List    ${data}    2
+
+TC02_Edit_Profile
+    launchBrowser
+    login To Application
+    clickOnUserTitle
+    clickOnProfile
+    clickOnEditProfile
+    fillupProfile
+    clickOnSaveProfile
