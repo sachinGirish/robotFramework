@@ -1,4 +1,4 @@
-# robotFramework
+# RobotFramework
 
 [![ScreenShot](https://blog.codecentric.de/files/2012/04/Sample_Overview1.png)]
 
@@ -65,6 +65,10 @@ On Windows running ride.py requires having <PythonInstallationDir>\Scripts on PA
 **2. Prerequisite jars**
 
 pip install jarName --ver    (use higher version )        
+
+
+$ pip freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs pip install -U   (To update All jars )
+
 
 apipkg==1.4
 Appium-Python-Client==0.20
